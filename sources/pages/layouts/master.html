@@ -94,6 +94,37 @@
           </div>
         </form>
         <ul class="navbar-nav navbar-right">
+          {% if pos == true %}
+            <li class="d-none d-md-block">
+              <span class="nav-link currentDate"></span>
+            </li>
+            <li class="d-none d-sm-block">
+                <a href="#registerDetailsModal" data-toggle="modal" class="nav-link nav-link-lg">Register Details</a>
+            </li>
+            <li class="d-none d-sm-block">
+                <a href="#todaySaleModal" data-toggle="modal" class="nav-link nav-link-lg">Today's Sale</a>
+            </li>
+            <li class="d-none d-sm-block">
+              <a href="#closeRgModal" data-toggle="modal" class="nav-link nav-link-lg">Close Register</a>
+            </li>
+            <li class="dropdown d-sm-none">
+              <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg ">
+                <i class="fas fa-th"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#registerDetailsModal" data-toggle="modal" class="dropdown-item">Register Details</a>
+                <a href="#todaySaleModal" data-toggle="modal" class="dropdown-item">Today's Sale</a>
+                <a href="#closeRgModal" data-toggle="modal" class="dropdown-item">Close Register</a>  
+              </div>
+            </li>
+            <li class="d-none d-lg-block">
+                <a href="pos.html" class="nav-link nav-link-lg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="POS"><i class="fas fa-th"></i></a>
+            </li>
+          {% else %}
+            <li>
+                <a href="pos.html" class="nav-link nav-link-lg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="POS"><i class="fas fa-th"></i></a>
+            </li>
+          {% endif %}
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
               <div class="dropdown-header">Messages
