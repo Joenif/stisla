@@ -318,3 +318,16 @@ function refreshTable() {
     $('#posTable > tbody').empty();
     addCartTable();
 }
+
+// remove after-footer space on minimized sidebar
+$('body').on('DOMSubtreeModified', function(){
+    var self = $(this);
+    var posFooter = $('footer');
+    var top = Number(screen.height) + 90 + 'px';
+    if (self.hasClass('sidebar-mini')) {
+        posFooter.addClass('footer-bottom');
+        posFooter.css('top',top);
+    } else if (self.hasClass('sidebar-mini') === false && posFooter.hasClass('footer-bottom')) {
+        posFooter.removeClass('footer-bottom');
+    }
+});

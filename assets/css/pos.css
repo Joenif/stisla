@@ -1,6 +1,3 @@
-body.sidebar-mini .main-sidebar {
-    overflow: auto!important;
-}
 .navbar-bg {
     height: 71px!important;
 }
@@ -37,6 +34,14 @@ body.sidebar-mini .main-sidebar {
 .pos-card .print {
     display: none;
 }
+.pos-card, .product-card {
+    height: 87vh;
+}
+.pos-bottom {
+    position: absolute;
+    width: 90%;
+    bottom: 10px;
+}
 
 .table>tbody>tr.success>td, .table>tbody>tr.success>th, .table>tbody>tr>td.success, .table>tbody>tr>th.success, .table>tfoot>tr.success>td, .table>tfoot>tr.success>th, .table>tfoot>tr>td.success, .table>tfoot>tr>th.success, .table>thead>tr.success>td, .table>thead>tr.success>th, .table>thead>tr>td.success, .table>thead>tr>th.success {
     background-color: #dff0d8;
@@ -50,7 +55,7 @@ body.sidebar-mini .main-sidebar {
 }
 .product-nav {
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
 }
 .pos button.edit {
     white-space: normal;
@@ -77,11 +82,24 @@ body.sidebar-mini .main-sidebar {
     color: white;
     background-color: #00a65a!important;
 }
+.footer-bottom {
+    position: absolute;
+}
 /* media queries  */
+@media screen and (max-width: 860px) {
+    .pos-card, .product-card {
+        height: 85vh;
+    }
+}
+@media screen and (min-width: 860px) and (max-width: 1104px) {
+    .pos-card, .product-card {
+        height: 87vh;
+    }
+}
 @media screen and (min-width: 576px) {
     .product-nav {
         position: absolute;
-        bottom: 20px!important;
+        bottom: 5px!important;
     }
 }
 @media screen and (max-width: 320px) {
@@ -90,6 +108,11 @@ body.sidebar-mini .main-sidebar {
         padding-right: 10px!important;
     }
 }
+/* @media screen and (max-width: 320px) {
+    .pos-card, .product-card {
+        height: 90vh;
+    }
+} */
 
 /* Print sytle  */
 @media print {
