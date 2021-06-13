@@ -1,5 +1,8 @@
+body.sidebar-mini .main-sidebar {
+    overflow: auto!important;
+}
 .navbar-bg {
-    height: 75px!important;
+    height: 71px!important;
 }
 .search-element {
     display: none!important;
@@ -74,6 +77,21 @@
     color: white;
     background-color: #00a65a!important;
 }
+/* media queries  */
+@media screen and (min-width: 576px) {
+    .product-nav {
+        position: absolute;
+        bottom: 20px!important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .navbar-right .nav-link {
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+    }
+}
+
+/* Print sytle  */
 @media print {
     body * {
         visibility:hidden;

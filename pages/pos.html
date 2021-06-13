@@ -25,7 +25,7 @@
         <form class="form-inline mr-auto">
           <ul class="navbar-nav mr-3">
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-none"><i class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
@@ -91,7 +91,7 @@
           </div>
         </form>
         <ul class="navbar-nav navbar-right align-item-center">
-          <li class="d-none d-md-block">
+          <li class="d-none d-lg-block">
             <span class="nav-link currentDate"></span>
           </li>
           <li class="d-none d-sm-block">
@@ -429,9 +429,9 @@
       <div class="main-content">
         <section class="section">
 
-          <div class="section-body mt-5 row" id="pos">
+          <div class="section-body mt-lg-1 row" id="pos">
 
-            <div class="card col-sm-6 col-md-6 mt-2 col-lg-5 mb-0 pos-card" >
+            <div class="card col-sm-6 col-md-6 col-lg-5 mt-2 mt-lg-0 mb-0 pos-card" >
                 <div class="card-body py-3 px-2">
                     <form action="#" method="post">
                         <div style="margin-bottom:5px;">
@@ -454,7 +454,7 @@
                         </div>
                         <div id="print">
                             <div class=" position-relative ">
-                                <div id="list-table-div" style="overflow: hidden; width: auto; height: 288px;">
+                                <div id="list-table-div" style="overflow: hidden; width: auto; height: 35vh;">
                                     <table id="posTable" class="table table-striped table-condensed table-hover list-table">
                                         <thead>
                                             <tr class="success">
@@ -495,21 +495,21 @@
                             </div>
                             <div class="col-12 text-center">
                               <div class="row justify-content-center">
-                                <div class="col-4 col-sm-3 col-md-4 px-0 py-0">
+                                <div class="col-4 col-sm-4 col-md-4 px-0 py-0">
                                     <div class="btn-group-vertical btn-block">
-                                        <button type="button" class="btn btn-warning btn-block " data-toggle="modal" data-target="#holdModal">Hold</button>
-                                        <button type="button" class="btn btn-danger btn-block " id="cancel-order">Cancel</button>
+                                        <button type="button" class="btn btn-warning btn-block px-0" data-toggle="modal" data-target="#holdModal">Hold</button>
+                                        <button type="button" class="btn btn-danger btn-block px-0" id="cancel-order">Cancel</button>
                                     </div>
 
                                 </div>
-                                <div class="col-4 col-sm-5 col-md-4" style="padding: 0 5px;">
+                                <div class="col-4 col-sm-4 col-md-4" style="padding: 0 5px;">
                                     <div class="btn-group-vertical btn-block">
-                                        <button type="button" class="btn bg-purple btn-block" id="print_order">Print Order</button>
-                                        <button type="button" class="btn bg-navy btn-block " id="print_bill">Print Bill</button>
+                                        <button type="button" class="btn bg-purple btn-block px-0" id="print_order">Print Order</button>
+                                        <button type="button" class="btn bg-navy btn-block px-0" id="print_bill">Print Bill</button>
                                     </div>
                                 </div>
                                 <div class="col-4 col-sm-4 col-md-4" style="padding: 0;">
-                                    <button type="button" class="btn btn-success btn-block " id="payment" style="height:67px;">Payment</button>
+                                    <button type="button" class="btn btn-success btn-block px-0" id="payment" style="height:67px;">Payment</button>
                                 </div>
                               </div>
 
@@ -520,8 +520,8 @@
                 </div>
             </div> <!-- End left card div-->
 
-            <div class="col-sm-6 col-md-6 col-lg-7 mt-2 px-3 product-card" >
-                <div id="item-list" style="height: 500px;">
+            <div class="col-sm-6 col-md-6 col-lg-7 mt-2 mt-lg-0 px-3 product-card" >
+                <div id="item-list" style="height: 37vh;">
                     <div class="d-flex">
                         <button type="button" data-name="Minion Hi" id="product-0101" value="TOY01" class="btn card mx-1 addProduct">
                             <span class="bg-img">
@@ -539,13 +539,13 @@
                 </div>
                 <div class="product-nav w-99">
                     <div class="btn-group btn-group-justified w-99 justify-content-center">
-                        <div class="btn-group col-4 col-sm-3 px-0">
+                        <div class="btn-group col-3 col-sm-3 col-md-4 px-0">
                             <button class="btn btn-warning" type="button" disabled="disabled"><i class="fa fa-chevron-left"></i></button>
                         </div>
-                        <div class="btn-group col-4 col-sm-6 px-0">
+                        <div class="btn-group col-6 col-sm-6 col-md-4 px-0">
                             <button class="btn btn-success" data-toggle="modal" data-target="#sellGCModal" type="button"><i class="fa fa-credit-card"></i> Sell Gift Card</button>
                         </div>
-                        <div class="btn-group col-4 col-sm-3 px-0">
+                        <div class="btn-group col-3 col-sm-3 col-md-4 px-0">
                             <button class="btn btn-warning" type="button" disabled="disabled"><i class="fa fa-chevron-right"></i></button>
                         </div>
                     </div>
@@ -1025,26 +1025,17 @@
                     </div>
                     <div class="modal-body">
                       <input type="text" class="form-control input-sm" id="get_ds" value="">
+
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="apply_to_order" checked="checked" name="apply_to" class="custom-control-input">
+                        <label class="custom-control-label" value="order" for="apply_to_order">Apply to order total</label>
+                      </div>
+
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="apply_to_products" name="apply_to" value="products" class="custom-control-input">
+                        <label class="custom-control-label" for="apply_to_products">Apply to all order items</label>
+                      </div>
       
-                      <label class="checkbox" for="apply_to_order">
-                        <div class="position-relative iradio_square-blue checked" aria-checked="false" aria-disabled="false">
-                          <label class="custom-control custom-checkbox">
-                            <input type="checkbox" name="" id="" value="checkedValue" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description"></span>
-                          </label>
-                          <input type="radio" value="order" id="apply_to_order" checked="checked" style="position: absolute; visibility: hidden;">
-                        </div>
-                        Apply to order total             
-                      </label>
-                      <label class="checkbox" for="apply_to_products">
-                        <div class="iradio_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
-                          <input type="radio" name="apply_to" value="products" id="apply_to_products" style="position: absolute; visibility: hidden;">
-                          <ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;">
-                          </ins>
-                        </div>
-                        Apply to all order items                
-                      </label>
                     </div>
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default btn-sm pull-left" data-dismiss="modal">Close</button>
